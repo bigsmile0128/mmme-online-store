@@ -35,7 +35,7 @@
     &__ttl {
         color: #FFF;
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.60);
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 44px;
         font-style: normal;
         font-weight: 700;
@@ -65,7 +65,7 @@
     }
     &__subttl {
         color: #FFF;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 20px;
         font-style: normal;
         font-weight: 800;
@@ -86,7 +86,7 @@
         left: 23px;
         color: #fff;
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.60);
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 13px;
         font-style: normal;
         font-weight: 800;
@@ -94,130 +94,216 @@
     }
 }
 
-.p-intro {
-    margin-top: -150px;
+.x-intro {
     position: relative;
-    z-index: 10;
-    @include media-sp {
-        margin-top: 0;
+
+    @include media-is-pc{
+        margin: 0 40px;
     }
-    &__wrap {
-        background-image: url(../img/intro-back-sp.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        @include media-sp {           
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+
+    @include media-sp{
+        margin: 0 40px;
     }
-    &__des {
-        color: #15584C;
-        text-align: center;
-        font-family: $font-shippori;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 29px; /* 145% */
-        @include media-sp {
-            font-size: 14px;
-            line-height: 33px;
-        }
-        &--ttl {
-            color: #15584C;
-            font-family: $font-shippori;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 36px; /* 150% */
-            text-align: center;
-        }
-        .__customer-survey {
-            color: #15584C;
-            font-family: $font-shippori;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
+
+    &__cat-talk{ 
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+        display: flex;
+
+        &--tk-card{
+            width: 120px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            font-family: $font-noto;
+            font-weight: 100%;
             line-height: 20px;
-            text-transform: uppercase;
-            @include media-sp {
-                font-size: 13px;
-                line-height: 33px;
+            writing-mode: vertical-rl;
+            border: 1px solid #bbbbbb;
+            border-radius: 5px;
+        }
+
+        img{
+            width: 120px;
+            height: auto;
+        }
+
+        @include media-pc {
+            img{
+                width: 100px;
+                height: auto;
             }
+            right: 0px;
+        }
+
+        @include media-sp {
+            img{
+                width: 80px;
+                height: auto;
+                right: 25px;
+            }
+            right: 0px;
+            bottom: 0px;
+        }
+
+        &--cat-ttl{
+            width: 120px;
+            height: 40px;
+            border: 1px solid #06c755;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            font-family: $font-roboto;
+            font-weight: 100%;
+            line-height: 20px;
+            color: #06c755;
+            margin-top: -22px;
+            box-shadow: 3px 3px #06C755;
         }
     }
-    &__suffer {
-        display: flex;    
-        width: 100%;
-        @include media-sp {
-            flex-wrap: wrap-reverse;
-        }  
-        &--wrap {
-            background-image: url(../img/intro.jpg);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            width: calc(100% - 375px);
-            position: relative;
-            @include media-sp {
-                background-image: url(../img/intro-sp.jpg);
-                width: 100%;
-                height: 354px;
+
+    &__card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 60px 0 0 0;
+
+        @include  media-sp {
+            flex-direction: column;
+        }
+
+        @include media-pc {
+            img{
+                width: 230px;
+                height: auto;
             }
-            &__abs {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 25px;
-            }   
-            &__ttl {
-                color: #fff;
-                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
-                font-family: $font-shippori;
-                font-size: 28px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 44px; /* 157.143% */   
-                width: max-content;
-                text-align: center;
-                margin: 0 auto;
-                position: relative;  
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 2px;
-                    background: #FAFF14;
-                    width: 100%;
-                }               
-            }    
-            &__subttl {
-                color: #FFF;
-                font-family: $font-shippori;
+        }
+
+        @include media-sp {
+            img{
+                width: 100%;
+                height: 100%;
+                margin: 10px 0;
+            }
+        }
+
+
+        
+        
+    }
+
+    &__des{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 150px 0;
+
+        &--content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 484px;
+            height: auto;
+
+            &__subttl{
                 font-size: 16px;
+                font-family: $font-roboto;
+                font-weight: 100%;
                 font-style: normal;
-                font-weight: 700;
-                line-height: 24px;
-                width: max-content;
-                text-align: center;
-                margin: 0 auto;
-                padding-top: 16px;
-                .__yellow-color {
-                    color: #FAFF14;
-                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    font-family: $font-shippori;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 24px; /* 150% */
+                line-height: 35px;
+                text-align: left;
+                letter-spacing: 1px;
+                color: #bbbbbb;
+                margin-bottom: 10px;
+            }
+
+            &__ttl{
+                font-size: 28px;
+                font-family: $font-noto;
+                font-weight: 100%;
+                font-style: normal;
+                line-height: 44px;
+                text-align: left;
+                letter-spacing: 3px;
+                color: #333333;
+                margin-bottom: 30px;
+            }
+
+            &__sen{
+                font-size: 13px;
+                font-family: $font-noto;
+                font-weight: 100%;
+                font-style: normal;
+                line-height: 32px;
+                text-align: left;
+                letter-spacing: 3px;
+                color: #333333;
+                margin-bottom: 35px;
+            }
+
+            &__btn-story{
+                width: 240px;
+                height: 50px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                font-size: 16px;
+                font-family: $font-roboto;
+                font-style: normal;
+                font-weight: 100%;
+                color: #333333;
+                letter-spacing: 3px;
+                border: 1px solid #333333;
+                border-radius: 50px;
+
+                svg{
+                    position: absolute;
+                    right: 25px;
                 }
-            }   
-        }  
+            }
+        }
+
+        &--figure{
+            width: 484px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__btn-story-figure{
+                width: 240px;
+                height: 50px;
+                margin-top: 60px;
+                padding: 13px 0;
+                text-align: center;
+                position: relative;
+                font-size: 16px;
+                font-family: $font-roboto;
+                font-style: normal;
+                font-weight: 100%;
+                color: #333333;
+                letter-spacing: 3px;
+                border: 1px solid #333333;
+                border-radius: 50px;
+
+                svg{
+                    position: absolute;
+                    right: 25px;
+                    top: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -244,7 +330,7 @@
         &--subttl {
             color: #15584C;
             text-align: center;
-            font-family: $font-shippori;
+            font-family: $font-noto;
             font-size: 23px;
             font-style: normal;
             font-weight: 800;
@@ -354,7 +440,7 @@
             .__trouble-ttl {
                 color: #FFF;
                 text-align: center;
-                font-family: $font-shippori;
+                font-family: $font-noto;
                 font-size: 23px;
                 font-style: normal;
                 font-weight: 800;
@@ -442,7 +528,7 @@
         &--ttl {
             color:#FFF;
             text-align: center;
-            font-family: $font-shippori;
+            font-family: $font-noto;
             font-size: 23px;
             font-style: normal;
             font-weight: 800;
@@ -502,7 +588,7 @@
     &__subttl {
         color:#15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -631,7 +717,7 @@
                     }
                     &-ttl {
                         color: #1E2528;
-                        font-family: $font-shippori;
+                        font-family: $font-noto;
                         font-size: 23px;
                         font-style: normal;
                         font-weight: 800;
@@ -683,7 +769,7 @@
     &__subttl {
         color: #15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -759,7 +845,7 @@
     &__subttl {
         color: #15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -899,7 +985,7 @@
         }
         &--ttl {
             color: #1E2528;
-            font-family: $font-oonishi;
+            font-family: $font-noto;
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -982,7 +1068,7 @@
         color: #FFF;
         text-align: center;
         text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -1097,7 +1183,7 @@
     &__subttl {
         color: #15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -1204,7 +1290,7 @@
     &__subttl {
         color: #15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -1326,7 +1412,7 @@
     &__ttl {
         color: #FFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
@@ -1335,7 +1421,7 @@
     &__subttl {
         color: #FFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -1368,7 +1454,7 @@
     &__subttl {
         color: #15584C;
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 23px;
         font-style: normal;
         font-weight: 800;
@@ -1597,7 +1683,7 @@
     &__ttl {
         color: var(--sub-dark-02, #15584C);
         text-align: center;
-        font-family: $font-shippori;
+        font-family: $font-noto;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;

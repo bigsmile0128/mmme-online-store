@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /**
 * @file _reset.scss
 **/
@@ -159,7 +159,7 @@ figure {
 }
 
 .l-common {
-  max-width: 968px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -189,7 +189,7 @@ figure {
 }
 .c-header__logo a {
   color: #1E2528;
-  font-family: "Epilogue", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -553,7 +553,7 @@ figure {
 .p-fv__ttl {
   color: #FFF;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 44px;
   font-style: normal;
   font-weight: 700;
@@ -588,7 +588,7 @@ figure {
 }
 .p-fv__subttl {
   color: #FFF;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
@@ -612,152 +612,208 @@ figure {
   left: 23px;
   color: #fff;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 800;
   line-height: 33px; /* 253.846% */
 }
 
-.p-intro {
-  margin-top: -150px;
+.x-intro {
   position: relative;
-  z-index: 10;
 }
-@media screen and (max-width: 767px) {
-  .p-intro {
-    margin-top: 0;
+@media screen and (min-width: 768px) {
+  .x-intro {
+    margin: 0 40px;
   }
 }
-.p-intro__wrap {
-  background-image: url(../img/intro-back-sp.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 @media screen and (max-width: 767px) {
-  .p-intro__wrap {
-    padding-left: 20px;
-    padding-right: 20px;
+  .x-intro {
+    margin: 0 40px;
   }
 }
-.p-intro__des {
-  color: #15584C;
-  text-align: center;
-  font-family: "Shippori Mincho B1", serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 29px; /* 145% */
-}
-@media screen and (max-width: 767px) {
-  .p-intro__des {
-    font-size: 14px;
-    line-height: 33px;
-  }
-}
-.p-intro__des--ttl {
-  color: #15584C;
-  font-family: "Shippori Mincho B1", serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 36px; /* 150% */
-  text-align: center;
-}
-.p-intro__des .__customer-survey {
-  color: #15584C;
-  font-family: "Shippori Mincho B1", serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 767px) {
-  .p-intro__des .__customer-survey {
-    font-size: 13px;
-    line-height: 33px;
-  }
-}
-.p-intro__suffer {
+.x-intro__cat-talk {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
   display: flex;
-  width: 100%;
 }
-@media screen and (max-width: 767px) {
-  .p-intro__suffer {
-    flex-wrap: wrap-reverse;
+.x-intro__cat-talk--tk-card {
+  width: 120px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100%;
+  line-height: 20px;
+  writing-mode: vertical-rl;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+}
+.x-intro__cat-talk img {
+  width: 120px;
+  height: auto;
+}
+@media screen and (max-width: 1280px) {
+  .x-intro__cat-talk {
+    right: 0px;
+  }
+  .x-intro__cat-talk img {
+    width: 100px;
+    height: auto;
   }
 }
-.p-intro__suffer--wrap {
-  background-image: url(../img/intro.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: calc(100% - 375px);
-  position: relative;
+@media screen and (max-width: 767px) {
+  .x-intro__cat-talk {
+    right: 0px;
+    bottom: 0px;
+  }
+  .x-intro__cat-talk img {
+    width: 80px;
+    height: auto;
+    right: 25px;
+  }
+}
+.x-intro__cat-talk--cat-ttl {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #06c755;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100%;
+  line-height: 20px;
+  color: #06c755;
+  margin-top: -22px;
+  box-shadow: 3px 3px #06C755;
+}
+.x-intro__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0 0 0;
 }
 @media screen and (max-width: 767px) {
-  .p-intro__suffer--wrap {
-    background-image: url(../img/intro-sp.jpg);
+  .x-intro__card {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .x-intro__card img {
+    width: 230px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .x-intro__card img {
     width: 100%;
-    height: 354px;
+    height: 100%;
+    margin: 10px 0;
   }
 }
-.p-intro__suffer--wrap__abs {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 25px;
+.x-intro__des {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 150px 0;
 }
-.p-intro__suffer--wrap__ttl {
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  font-family: "Shippori Mincho B1", serif;
+.x-intro__des--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 484px;
+  height: auto;
+}
+.x-intro__des--content__subttl {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100%;
+  font-style: normal;
+  line-height: 35px;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #bbbbbb;
+  margin-bottom: 10px;
+}
+.x-intro__des--content__ttl {
   font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100%;
   font-style: normal;
-  font-weight: 700;
-  line-height: 44px; /* 157.143% */
-  width: -moz-max-content;
-  width: max-content;
-  text-align: center;
-  margin: 0 auto;
+  line-height: 44px;
+  text-align: left;
+  letter-spacing: 3px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.x-intro__des--content__sen {
+  font-size: 13px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100%;
+  font-style: normal;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 3px;
+  color: #333333;
+  margin-bottom: 35px;
+}
+.x-intro__des--content__btn-story {
+  width: 240px;
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 100%;
+  color: #333333;
+  letter-spacing: 3px;
+  border: 1px solid #333333;
+  border-radius: 50px;
 }
-.p-intro__suffer--wrap__ttl::after {
-  content: "";
+.x-intro__des--content__btn-story svg {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  background: #FAFF14;
-  width: 100%;
+  right: 25px;
 }
-.p-intro__suffer--wrap__subttl {
-  color: #FFF;
-  font-family: "Shippori Mincho B1", serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  width: -moz-max-content;
-  width: max-content;
+.x-intro__des--figure {
+  width: 484px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.x-intro__des--figure__btn-story-figure {
+  width: 240px;
+  height: 50px;
+  margin-top: 60px;
+  padding: 13px 0;
   text-align: center;
-  margin: 0 auto;
-  padding-top: 16px;
-}
-.p-intro__suffer--wrap__subttl .__yellow-color {
-  color: #FAFF14;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Shippori Mincho B1", serif;
+  position: relative;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 150% */
+  font-weight: 100%;
+  color: #333333;
+  letter-spacing: 3px;
+  border: 1px solid #333333;
+  border-radius: 50px;
+}
+.x-intro__des--figure__btn-story-figure svg {
+  position: absolute;
+  right: 25px;
+  top: 10px;
 }
 
 .p-about__sort {
@@ -783,7 +839,7 @@ figure {
 .p-about__sort--subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -898,7 +954,7 @@ figure {
 .p-about__trouble--ttl .__trouble-ttl {
   color: #FFF;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -989,7 +1045,7 @@ figure {
 .p-about__contact--ttl {
   color: #FFF;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1051,7 +1107,7 @@ figure {
 .p-feature__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1192,7 +1248,7 @@ figure {
 }
 .p-feature__wrap--item__point .__point-ttl {
   color: #1E2528;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1241,7 +1297,7 @@ figure {
 .p-service__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1317,7 +1373,7 @@ figure {
 .p-voice__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1466,7 +1522,7 @@ figure {
 }
 .p-voice__contents--ttl {
   color: #1E2528;
-  font-family: "ta-oonishi", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -1548,7 +1604,7 @@ figure {
   color: #FFF;
   text-align: center;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1669,7 +1725,7 @@ figure {
 .p-flow__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1784,7 +1840,7 @@ figure {
 .p-faq__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -1911,7 +1967,7 @@ figure {
 .p-organize__ttl {
   color: #FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -1920,7 +1976,7 @@ figure {
 .p-organize__subttl {
   color: #FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1952,7 +2008,7 @@ figure {
 .p-contact__subttl {
   color: #15584C;
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -2183,7 +2239,7 @@ figure {
 .p-connect__ttl {
   color: var(--sub-dark-02, #15584C);
   text-align: center;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
